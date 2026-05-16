@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #141414;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+header {
+    background-color: #000000;
+    padding: 20px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #e50914;
+    letter-spacing: 1px;
+}
+
+.menu-label {
+    display: block;
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.menu-icono {
+    width: 25px;
+    cursor: pointer;
+}
+
+#menu {
+    display: none;
+}
+
+.navegar ul li {
+    position: relative;
+    list-style: none;
+}
+
+.navegar ul li a {
+    font-size: 20px;
+    padding: 20px;
+    color: #fffdfc;
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navegar a:hover {
+    color: #e50914;
+    transition: 0.2s;
+}
+
+.menu { 
+    padding: 30px;
+}
+
+.menu .navegar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #323337;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    padding-top: 80px;
+}
+
+.menu .navegar ul li {
+    width: 100%;
+}
+
+#menu:checked ~ .menu .navegar {
+    transform: translateX(0);
+}
+
+.buscador {
+    display: flex;
+    gap: 10px;
+}
+
+.buscador input {
+    padding: 12px 20px;
+    width: 300px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    font-size: 14px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.buscador input:focus {
+    outline: none;
+    border-color: #e50914;
+    background-color: #2b2b2b;
+}
+
+.buscador button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e50914;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.buscador button:hover {
+    background-color: #b81d24;
+}
+
+.buscador button:active {
+    transform: scale(0.98);
+}
+
+.peliculas-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    padding: 0 4% 40px 4%;
+}
+
+.movie-card {
+    background-color: #181818;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.movie-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 12px 12px 4px 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-card p {
+    font-size: 14px;
+    color: #aaaaaa;
+    margin: 0 12px 16px 12px;
+    font-weight: 500;
+}
+
+.titulo-seccion {
+    padding: 40px 4% 10px 4%;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 4%;
+    background-color: #000000;
+    border-top: 1px solid #222;
+    margin-top: 40px;
+}
+
+footer h3 {
+    font-size: 14px;
+    color: #aaaaaa;
+    font-weight: 400;
+}
+
+.redes {
+    gap: 15px;
+    display: flex;
+}
+
+.redes a {
+    text-decoration: none;
+    color: #f3ebe5;
+}
+
+.redes1 img {
+    transition: transform 0.2s ease, filter 0.2s ease;
+    filter: grayscale(30%);    
+}
+
+.redes1:hover img {
+    transform: translateY(-3px) scale(1.05);
+    filter: grayscale(0%);
+}
+
+.btn-favorito, .btn-eliminar {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.btn-favorito {
+    background-color: #f0c040;
+    color: #111;
+}
+
+.btn-favorito:hover {
+    background-color: #b28b00;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    header h1 {
+        margin-bottom: 0;
+    }
+
+    .buscador {
+        width: 100%;
+    }
+
+    .buscador input {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .menu-label {
+        top: 20px;
+        left: 15px;
+    }
+}

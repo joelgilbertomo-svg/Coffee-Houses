@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieZone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <input type="checkbox" id="menu">
+        <label for="menu" class="menu-label">
+            <img src="img/menu.png" class="menu-icono" alt="icono">
+        </label>
+        <div class="menu">
+            <nav class="navegar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="favorito.html">Mis favoritos</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>    
+        </div>
+        <h1>MovieZone</h1>
+
+        <div class="buscador">
+            <input type="text" id="buscarinput" placeholder="Buscador">
+            <button id="buscarBtn">Buscar</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="seccion-resultados" style="display: none;">
+            <h2 class="titulo-seccion">Resultados de Búsqueda</h2>
+            <div id="resultados" class="peliculas-contenedor"></div>
+        </div>
+
+        <h2 class="titulo-seccion">Acción</h2>
+        <div id="accion" class="peliculas-contenedor"></div>
+
+        <h2 class="titulo-seccion">Comedia</h2>
+        <div id="comedia" class="peliculas-contenedor"></div>
+
+        <h2 class="titulo-seccion">Terror</h2>
+        <div id="terror" class="peliculas-contenedor"></div>
+
+        <h2 class="titulo-seccion">Series</h2>
+        <div id="series" class="peliculas-contenedor"></div>
+    </main>
+
+    <footer>
+        <h3>©2026 Joel Morel</h3>
+        <div class="redes">
+            <div class="redes1">
+                <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram (1).png" width="40px" height="40px" style="background-color: aliceblue; border-radius: 10px;" alt="Instagram"></a>
+            </div>
+            <div class="redes1">
+                <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook (1).png" width="40px" height="40px" style="background-color: aliceblue; border-radius: 10px;" alt="Facebook"></a>
+            </div>
+            <div class="redes1">
+                <a href="https://x.com/" target="_blank"><img src="img/twitter (1).png" width="40px" height="40px" style="background-color: aliceblue; border-radius: 10px;" alt="X"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
